@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>News</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>News</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Thumbnail</th>
+      <th>Language</th>
+      <th>Duration</th>
+      <th>Mp4</th>
+      <th>Hls</th>
+      <th>Mp3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @news.each do |news| %>
+      <tr>
+        <td><%= news.news_id %></td>
+        <td><%= news.name %></td>
+        <td><%= news.description %></td>
+        <td><%= news.type %></td>
+        <td><%= news.thumbnail %></td>
+        <td><%= news.language %></td>
+        <td><%= news.duration %></td>
+        <td><%= news.mp4 %></td>
+        <td><%= news.hls %></td>
+        <td><%= news.mp3 %></td>
+        <td><%= link_to 'Show', news %></td>
+        <td><%= link_to 'Edit', edit_news_path(news) %></td>
+        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New News', new_news_path %>

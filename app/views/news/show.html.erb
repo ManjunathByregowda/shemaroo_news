@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>News:</strong>
+  <%= @news.news_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @news.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @news.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @news.type %>
+</p>
+
+<p>
+  <strong>Thumbnail:</strong>
+  <%= @news.thumbnail %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @news.language %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @news.duration %>
+</p>
+
+<p>
+  <strong>Mp4:</strong>
+  <%= @news.mp4 %>
+</p>
+
+<p>
+  <strong>Hls:</strong>
+  <%= @news.hls %>
+</p>
+
+<p>
+  <strong>Mp3:</strong>
+  <%= @news.mp3 %>
+</p>
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>
